@@ -12,6 +12,40 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>NBA</h1>
+      <h2 id="message"></h2>
+
+<div class="container">
+<nav class="navbar">
+  <form id="sign-up">
+
+    <input type="email" name="credentials[email]" placeholder="Enter email">
+    <input type="password" name="credentials[password]" placeholder="Enter password">
+    <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+    <button id="btn-hide">Sign up</button>
+  </form>
+
+  <form id="sign-in">
+
+    <input type="email" name="credentials[email]" placeholder="Enter email">
+    <input type="password" name="credentials[password]" placeholder="Enter Password">
+    <button>Sign In</button>
+  </form>
+</nav>
+
+  <form id="change-password">
+    <h3>Change Password</h3>
+    <input type="password" name="passwords[old]" placeholder="Enter old password">
+    <input type="password" name="passwords[new]" placeholder="Enter new password">
+    <button>Change Password</button>
+  </form>
+
+
+  <form id="sign-out">
+    <h3>Sign-Out</h3>
+    <button>Sign Out</button>
+  </form>
+
+</div>
     </body>
 </html>
