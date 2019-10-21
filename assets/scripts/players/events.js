@@ -13,7 +13,6 @@ const onAddPlayer = function (event) {
 }
 
 const onAllPlayers = function (event) {
-  console.log(event)
   event.preventDefault()
   api.allPlayers()
     .then(ui.onShowAllPLayersSuccess)

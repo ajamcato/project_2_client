@@ -1,0 +1,13 @@
+<div class="container">
+   <h2>Players: </h2>
+   <ul id="players">
+   {{#each players as |player|}}
+     <li>
+       {{player.player_name}}
+       {{player.player_college}}
+       {{player.player_sport}}
+       {{player.player_position}}
+     </li>
+   {{/each}}
+   </ul>
+</div>

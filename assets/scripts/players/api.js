@@ -24,10 +24,12 @@ const allPlayers = function (formData) {
 }
 
 const deletePlayer = function (formData) {
+  console.log(store.user)
+  console.log('api delete', formData.player.id)
   return $.ajax({
     url: config.apiUrl + '/players/' + formData.player.id,
-    header: {
-      Authorization: 'Token token=' + store.user.token
+    headers: {
+      Authorization: `Token token=${store.user.token}`
     },
     method: 'DELETE'
   })

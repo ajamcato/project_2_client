@@ -3,8 +3,10 @@ const store = require('../store')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
+  $('#message').show(500)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  $('#message').fadeOut(1000)
   $('form').trigger('reset')
 }
 
@@ -36,6 +38,7 @@ const onSignInSuccess = (responseData) => {
   $('#all-players').show()
   $('#update-player').show()
   $('#delete-player').show()
+  $('#player-display').show()
 }
 
 const onSignInFailure = function () {
@@ -55,11 +58,13 @@ const onChangePasswordFailure = function () {
 const onSignOutSuccess = function () {
   successMessage('Signed out successfully')
   $('#sign-up, #sign-in').show()
-  $('#game').hide()
+  $('#player-display').hide()
   $('#change-password').hide()
   $('#sign-out').hide()
   $('#add-player').hide()
   $('#update-player').hide()
+  $('#all-players').hide()
+  $('#delete-player').hide()
 }
 
 const onSignOutFailure = function () {

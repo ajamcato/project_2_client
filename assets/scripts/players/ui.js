@@ -30,17 +30,17 @@ const onAddPlayerFailure = function (data) {
 
 const onShowAllPLayersSuccess = function (data) {
   // console.log(data)
+  $('#player-display').html('')
   data.players.forEach(player => {
     const playerHTML = (`
-    <h4>Name:${player.player_name}</h4>
+    <h4>Name: ${player.player_name}</h4>
     <p>ID: ${player.id}</p>
     <p>Sport: ${player.player_sport}</p>
     <p>College: ${player.player_college}</p>
     <p>Position: ${player.player_position}</p>
     <br>
   `)
-    console.log('showing all players')
-    $('#player-display').html(playerHTML)
+    $('#player-display').append(playerHTML)
   })
 }
 
@@ -50,7 +50,6 @@ const onShowAllPlayersFailure = function (data) {
 
 const onDeletePlayerSuccess = function () {
   store.player = null
-  $('#player-message').html('Your player has been deleted! Click "Get All Players" again to see them all.')
   successMessage('Deleted player successfully!')
   $('#delete-player').trigger('reset')
 }
