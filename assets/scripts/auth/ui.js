@@ -30,8 +30,12 @@ const onSignInSuccess = (responseData) => {
   store.user = responseData.user
   $('#message').css('color', 'green')
   $('#sign-up, #sign-in').hide()
-  $('#change-password').show()
+  $('#change-password').show() // change to show
   $('#sign-out').show()
+  $('#add-player').show()
+  $('#all-players').show()
+  $('#update-player').show()
+  $('#delete-player').show()
 }
 
 const onSignInFailure = function () {
@@ -54,6 +58,8 @@ const onSignOutSuccess = function () {
   $('#game').hide()
   $('#change-password').hide()
   $('#sign-out').hide()
+  $('#add-player').hide()
+  $('#update-player').hide()
 }
 
 const onSignOutFailure = function () {

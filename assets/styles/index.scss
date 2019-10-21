@@ -1,1 +1,46 @@
 @import '~bootstrap/scss/bootstrap';
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+body {
+  background-image: url('assets/image/nba.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'times new roman';
+  text-align: center;
+}
+h1 {
+  color: #fff;
+}
+h2 {
+  color: white;
+  text-align: center;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 18px;
+  font-weight: 100px;
+  transition: border 0.5s;
+  outline: none;
+  text-align: center;
+  color: #fff;
+
+}
+
+
+#sign-in {
+  background: rgba(44,62,80,0.7);
+  padding: 40px;
+  width: 296px;
+  margin: auto;
+  margin-top: 80px;
+  height: 400px;
+
+}

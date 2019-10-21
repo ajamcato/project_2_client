@@ -42,4 +42,5 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut
+
 }
