@@ -9,7 +9,6 @@ curl "http://localhost:4741/players/${ID}" \
       "player_sport": "'"${SPORT}"'",
       "player_college": "'"${COLLEGE}"'",
       "player_position": "'"${POSITION}"'",
-      "graduation_date": "'"${GRADUATION}"'",
       "user_id": "'"${ID}"'"
     }
   }'
