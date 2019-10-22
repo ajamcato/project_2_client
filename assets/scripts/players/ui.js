@@ -57,8 +57,8 @@ const onUpdatePlayerSuccess = function (data) {
   console.log('success data is ', data)
   $('#message').html('Your player has been edited!')
   // setTimeout(function () {
-  //  $('#player-message').fadeOut().empty()
-  // }, 2000)
+  // $('#player-message').fadeOut().empty()
+  //  }, 2000)
   store.player = data.player
 }
 

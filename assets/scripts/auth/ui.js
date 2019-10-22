@@ -39,6 +39,7 @@ const onSignInSuccess = (responseData) => {
   $('#update-player').show()
   $('#delete-player').show()
   $('#player-display').show()
+  $('.box-one').hide()
 }
 
 const onSignInFailure = function () {
@@ -66,6 +67,7 @@ const onSignOutSuccess = function () {
   $('#all-players').hide()
   $('#delete-player').hide()
   $('#player-display').html('')
+  $('.box-one').show()
 }
 
 const onSignOutFailure = function () {
