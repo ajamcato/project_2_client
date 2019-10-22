@@ -13,10 +13,11 @@ body {
   font-family: 'times new roman';
   text-align: center;
 }
+
 h1 {
   color: #fff;
 }
-h2 {
+h2,h3 {
   color: white;
   text-align: center;
 }
@@ -34,6 +35,21 @@ input {
 
 }
 
+::placeholder {
+   color: white;
+}
+
+.change-password {
+  margin-top: 10px;
+}
+
+.show-all-players {
+  margin: 10px;
+}
+
+#delete-player {
+  margin: 15px;
+}
 
 #sign-in {
   background: rgba(44,62,80,0.7);

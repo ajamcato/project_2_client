@@ -6,7 +6,7 @@ const successMessage = function (newText) {
   $('#message').show(500)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
-  $('#message').fadeOut(1000)
+  // $('#message').fadeOut(1000)
   $('form').trigger('reset')
 }
 
@@ -65,6 +65,7 @@ const onSignOutSuccess = function () {
   $('#update-player').hide()
   $('#all-players').hide()
   $('#delete-player').hide()
+  $('#player-display').html('')
 }
 
 const onSignOutFailure = function () {

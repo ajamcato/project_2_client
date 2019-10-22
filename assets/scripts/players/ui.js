@@ -18,9 +18,9 @@ const onAddPlayerSuccess = function (data) {
   store.player = data.player
   successMessage('Added player successfully!')
   $('form').trigger('reset')
-  setTimeout(function () {
-    $('#player-message').fadeOut().empty()
-  }, 2000)
+  // setTimeout(function () {
+  //   $('#player-message').fadeOut().empty()
+  // }, 2000)
 }
 const onAddPlayerFailure = function (data) {
   store.player = data.player
@@ -29,7 +29,6 @@ const onAddPlayerFailure = function (data) {
 }
 
 const onShowAllPLayersSuccess = function (data) {
-  // console.log(data)
   $('#player-display').html('')
   data.players.forEach(player => {
     const playerHTML = (`
@@ -56,7 +55,7 @@ const onDeletePlayerSuccess = function () {
 
 const onUpdatePlayerSuccess = function (data) {
   console.log('success data is ', data)
-  $('#player-message').html('Your player has been edited!')
+  $('#message').html('Your player has been edited!')
   // setTimeout(function () {
   //  $('#player-message').fadeOut().empty()
   // }, 2000)
@@ -64,7 +63,7 @@ const onUpdatePlayerSuccess = function (data) {
 }
 
 const onUpdatePlayerFailure = function (data) {
-  $('#player-message').html('Player update failed! Please try again.')
+  $('#message').html('Player update failed! Please try again.')
   store.player = data.player
 }
 
