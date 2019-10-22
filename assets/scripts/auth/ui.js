@@ -40,6 +40,7 @@ const onSignInSuccess = (responseData) => {
   $('#delete-player').show()
   $('#player-display').show()
   $('.box-one').hide()
+  $('#hide-players').show()
 }
 
 const onSignInFailure = function () {
@@ -68,6 +69,7 @@ const onSignOutSuccess = function () {
   $('#delete-player').hide()
   $('#player-display').html('')
   $('.box-one').show()
+  $('#hide-players').hide()
 }
 
 const onSignOutFailure = function () {
