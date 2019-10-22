@@ -19,6 +19,12 @@ const onAllPlayers = function (event) {
     .catch(ui.onShowAllPlayersFailure)
 }
 
+const onHidePlayers = function (event) {
+  event.preventDefault()
+  console.log(event)
+  ui.onHidePlayersSuccess()
+}
+
 const onDeletePlayer = function (event) {
   event.preventDefault()
   const formData = getFormFields(event.target)
@@ -40,5 +46,6 @@ module.exports = {
   onAddPlayer,
   onDeletePlayer,
   onUpdatePlayer,
-  onAllPlayers
+  onAllPlayers,
+  onHidePlayers
 }

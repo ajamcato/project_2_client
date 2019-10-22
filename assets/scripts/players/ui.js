@@ -44,7 +44,11 @@ const onShowAllPLayersSuccess = function (data) {
 }
 
 const onShowAllPlayersFailure = function (data) {
-  ('#players-history').html('Could not retrieve all players. Please try again.')
+  $('#players-history').html('Could not retrieve all players. Please try again.')
+}
+
+const onHidePlayersSuccess = function (data) {
+  $('#player-display').html('')
 }
 
 const onDeletePlayerSuccess = function () {
@@ -74,5 +78,6 @@ module.exports = {
   onUpdatePlayerSuccess,
   onUpdatePlayerFailure,
   onShowAllPLayersSuccess,
-  onShowAllPlayersFailure
+  onShowAllPlayersFailure,
+  onHidePlayersSuccess
 }

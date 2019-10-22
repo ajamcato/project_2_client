@@ -23,4 +23,5 @@ $(() => {
   $('#all-players').on('submit', playersEvents.onAllPlayers)
   $('#update-player').on('submit', playersEvents.onUpdatePlayer)
   $('#delete-player').on('submit', playersEvents.onDeletePlayer)
+  $('#hide-players').on('click', playersEvents.onHidePlayers)
 })
