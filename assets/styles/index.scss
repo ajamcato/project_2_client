@@ -41,22 +41,46 @@ input {
 
 .change-password {
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .show-all-players {
   margin: 10px;
+  margin-top: 15px;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
 }
 
 #delete-player {
   margin: 15px;
+  margin-top: 10px;
 }
 
 #sign-in {
+  margin-top: 60px;
+}
+
+.box-one {
+  box-shadow: -1px 1px 30px 10px black;
+  margin-top: 180px;
+  padding-bottom: 200px;
+  padding-top: 100px;
+  justify-content: center;
+  max-width: 900px;
+  margin-left: 280px;
+
+}
+
+
+
+/*#sign-in {
   background: rgba(44,62,80,0.7);
   padding: 40px;
   width: 296px;
   margin: auto;
   margin-top: 80px;
   height: 400px;
-
-}
+} */
