@@ -54,7 +54,6 @@ const onDeletePlayerSuccess = function () {
 }
 
 const onUpdatePlayerSuccess = function (data) {
-  console.log('success data is ', data)
   $('#message').html('Your player has been edited!')
   // setTimeout(function () {
   // $('#player-message').fadeOut().empty()
