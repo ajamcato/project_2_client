@@ -5,12 +5,15 @@ const successMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  $('#message').css('color', 'green')
   $('form').trigger('reset')
 }
 const failureMessage = function (newText) {
   $('#message').text(newText)
-  $('#message').removeClass('success')
+  $('form').trigger('reset')
   $('#message').addClass('failure')
+  $('#message').removeClass('success')
+  $('#message').css('color', 'red')
 }
 
 const onAddPlayerSuccess = function (data) {
@@ -21,9 +24,9 @@ const onAddPlayerSuccess = function (data) {
   //   $('#player-message').fadeOut().empty()
   // }, 2000)
 }
+
 const onAddPlayerFailure = function (data) {
   store.player = data.player
-  // console.log(store)
   failureMessage('Added player failed')
 }
 
@@ -56,8 +59,13 @@ const onDeletePlayerSuccess = function () {
   $('#delete-player').trigger('reset')
 }
 
+const onDeletePlayerFailure = function () {
+  store.player = null
+  failureMessage('Deleted player failed, Please enter ID')
+}
+
 const onUpdatePlayerSuccess = function (data) {
-  $('#message').html('Your player has been edited!')
+  successMessage('Your player has been edited!')
   $('form').trigger('reset')
   // setTimeout(function () {
   // $('#player-message').fadeOut().empty()
@@ -66,7 +74,7 @@ const onUpdatePlayerSuccess = function (data) {
 }
 
 const onUpdatePlayerFailure = function (data) {
-  $('#message').html('Player update failed! Please try again.')
+  failureMessage('Player update failed! Please try again.')
   store.player = data.player
 }
 
@@ -78,5 +86,6 @@ module.exports = {
   onUpdatePlayerFailure,
   onShowAllPLayersSuccess,
   onShowAllPlayersFailure,
-  onHidePlayersSuccess
+  onHidePlayersSuccess,
+  onDeletePlayerFailure
 }
