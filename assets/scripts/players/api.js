@@ -2,7 +2,6 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const addPlayer = function (formData) {
-  console.log('api data', formData)
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/players',
@@ -24,8 +23,6 @@ const allPlayers = function (formData) {
 }
 
 const deletePlayer = function (formData) {
-  console.log(store.user)
-  console.log('api delete', formData.player.id)
   return $.ajax({
     url: config.apiUrl + '/players/' + formData.player.id,
     headers: {
@@ -36,7 +33,6 @@ const deletePlayer = function (formData) {
 }
 
 const updatePlayer = (formData) => {
-  console.log('api update', formData.player.id)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/players/' + formData.player.id,
@@ -48,17 +44,6 @@ const updatePlayer = (formData) => {
     data: formData
   })
 }
-
-//     data: {
-//       'player': {
-//         'name': formData.name,
-//         'sport': formData.sport,
-//         'college': formData.college,
-//         'position': formData.position
-//       }
-//     }
-//   })
-// }
 
 module.exports = {
   addPlayer,

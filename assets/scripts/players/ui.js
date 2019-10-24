@@ -14,7 +14,6 @@ const failureMessage = function (newText) {
 }
 
 const onAddPlayerSuccess = function (data) {
-  console.log(data)
   store.player = data.player
   successMessage('Added player successfully!')
   $('form').trigger('reset')
@@ -58,7 +57,6 @@ const onDeletePlayerSuccess = function () {
 }
 
 const onUpdatePlayerSuccess = function (data) {
-  console.log('success data is ', data)
   $('#message').html('Your player has been edited!')
   $('form').trigger('reset')
   // setTimeout(function () {

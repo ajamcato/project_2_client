@@ -6,7 +6,6 @@ const onAddPlayer = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log('formData is', formData)
   api.addPlayer(formData)
     .then(ui.onAddPlayerSuccess)
     .catch(ui.onAddPlayerFailure)
@@ -21,7 +20,6 @@ const onAllPlayers = function (event) {
 
 const onHidePlayers = function (event) {
   event.preventDefault()
-  console.log(event)
   ui.onHidePlayersSuccess()
 }
 
@@ -36,7 +34,6 @@ const onDeletePlayer = function (event) {
 const onUpdatePlayer = function (event) {
   event.preventDefault()
   const formData = getFormFields(event.target)
-  console.log(formData)
   api.updatePlayer(formData)
     .then(ui.onUpdatePlayerSuccess)
     .catch(ui.onUpdatePlayerFailure)
