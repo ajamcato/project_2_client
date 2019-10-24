@@ -13,6 +13,7 @@ $(() => {
   $('#update-player').hide()
   $('#delete-player').hide()
   $('#change-password').hide()
+  $('#hide-players').hide()
   $('#sign-out').hide()
   // your JS code goes here
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -23,4 +24,5 @@ $(() => {
   $('#all-players').on('submit', playersEvents.onAllPlayers)
   $('#update-player').on('submit', playersEvents.onUpdatePlayer)
   $('#delete-player').on('submit', playersEvents.onDeletePlayer)
+  $('#hide-players').on('click', playersEvents.onHidePlayers)
 })

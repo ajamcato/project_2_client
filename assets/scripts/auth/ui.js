@@ -8,11 +8,13 @@ const successMessage = function (newText) {
   $('#message').addClass('success')
   // $('#message').fadeOut(1000)
   $('form').trigger('reset')
+  $('#message').css('color', 'green')
 }
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
   $('#message').addClass('failure')
+  $('#message').css('color', 'red')
   $('#message').removeClass('success')
   $('form').trigger('reset')
 }
@@ -40,10 +42,12 @@ const onSignInSuccess = (responseData) => {
   $('#delete-player').show()
   $('#player-display').show()
   $('.box-one').hide()
+  $('#hide-players').show()
 }
 
 const onSignInFailure = function () {
   $('#message').css('color', 'red')
+  failureMessage('Sign In Failed! Please Sign In')
 }
 
 const onChangePasswordSuccess = function () {
@@ -68,6 +72,7 @@ const onSignOutSuccess = function () {
   $('#delete-player').hide()
   $('#player-display').html('')
   $('.box-one').show()
+  $('#hide-players').hide()
 }
 
 const onSignOutFailure = function () {
